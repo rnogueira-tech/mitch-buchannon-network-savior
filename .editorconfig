@@ -1,0 +1,41 @@
+# ========================================
+# editorconfig Configuration
+# File: config
+# Last update: 2026-01-20
+# Author: RNogueira
+# Version: 1.0.0
+# ========================================
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 4
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# YAML/JSON; XML; INI/Properties; TOML
+[*.{yml,yaml,json,xml,ini,properties,cfg,conf,toml}]
+indent_size = 2
+
+# MARKDOWN
+[*.md]
+indent_size = 2
+max_line_length = 80
+trim_trailing_whitespace = false
+
+# Window Files
+[*.{bat,cmd}]
+end_of_line = crlf
+
+# Special files
+## .gitignore,.gitattributes,.editorconfig,.clang-format,.clang-tidy,Dockerfile
+[{.*,Dockerfile}]
+indent_size = 2
+
+[Makefile]
+indent_style = tab

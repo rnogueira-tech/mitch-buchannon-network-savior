@@ -5,9 +5,11 @@
 ## 📋 Description
 Bash script to automatically monitor and restart network interfaces on Linux and Synology DSM systems.
 
-⚠️ <b>Special Note:</b> This script was specifically created to address network interface failures when using the "DSM driver for Realtek RTL8152/8153/8156/8157/8159 based USB Ethernet adapters". Some users may experience occasionally drop connections on Synology systems, and this script provides automated recovery. 
+⚠️ <b>Special Notes:</b> 
+- This script was specifically created to address network interface failures when using the "DSM driver for Realtek RTL8152/8153/8156/8157/8159 based USB Ethernet adapters". Some users may experience occasionally drop connections on Synology systems, and this script provides automated recovery. 
+- 🔥 Current not supporting r8152-geminilake-2.21.4-1_7.3
 
-🔥 <b>Test Environment:</b>
+📌 <b>Test Environment:</b>
 - Diskstation: DS423+
 - DSM: 7.3.2
 - Network adapter: Wavlink 5 Gbps (RTL8157/Type-C)

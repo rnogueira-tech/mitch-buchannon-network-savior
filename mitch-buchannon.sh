@@ -37,9 +37,12 @@ update_log_file() {
 }
 
 log() {
-    local severity=$(printf '%-5.5s' "$1")
-    local process=$(printf '%-15.15s' "$2")
+    local severity
+    local process
     local message="$3"
+
+    severity=$(printf '%-5.5s' "$1")
+    process=$(printf '%-15.15s' "$2")
 
     local level_num
     case "$LOG_LEVEL" in

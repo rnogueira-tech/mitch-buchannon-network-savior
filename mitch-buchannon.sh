@@ -7,10 +7,6 @@
 # Author: RNogueira
 # Requirements:
 
-# =========================================================
-# CONFIGURATION
-# =========================================================
-
 VERSION="1.0.0"
 SCRIPT_NAME="mitch_buchannon"
 
@@ -89,18 +85,18 @@ check_interface_exists() {
     fi
 }
 
-#check_interface_up() {
-#    local state
-#    state=$(cat "/sys/class/net/$INTERFACE/operstate" 2>/dev/null)
-#
-#    if [ "$state" = "up" ]; then
-#        log "DEBUG" "InterfaceCheck" "Interface $INTERFACE está UP"
-#        return 0
-#    else
-#        log "WARN" "InterfaceCheck" "Interface $INTERFACE está $state"
-#        return 1
-#    fi
-#}
+check_interface_up() {
+    local state
+    state=$(cat "/sys/class/net/$INTERFACE/operstate" 2>/dev/null)
+
+    if [ "$state" = "up" ]; then
+        log "DEBUG" "InterfaceCheck" "Interface $INTERFACE está UP"
+        return 0
+    else
+        log "WARN" "InterfaceCheck" "Interface $INTERFACE está $state"
+        return 1
+    fi
+}
 
 #check_interface_has_ip() {
 #    if /sbin/ifconfig "$INTERFACE" | grep -q "inet "; then
